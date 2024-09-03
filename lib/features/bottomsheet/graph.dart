@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class Graph extends StatefulWidget {
   const Graph({super.key});
@@ -8,23 +9,39 @@ class Graph extends StatefulWidget {
 }
 
 class _GraphState extends State<Graph> {
+  double _progress=0;
+  final uri = Uri.parse("https://aurifyae.github.io/aibak-app/graph.html");
+  late InAppWebViewController inAppWebViewController;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-          child: Column(
-            children: [
-              Center(child: Padding(
-                padding: const EdgeInsets.only(top: 350),
-                child: Text("Loading............",style: TextStyle(color: Colors.black26),),
-              ))
-            ],
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back,color:Color(0xFFD3AF37)),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
-        ),
+        ),        body: Stack(
+        children: [
+          InAppWebView(
+            initialUrlRequest: URLRequest(
+              url: WebUri.uri(uri),
+            ),
+            onWebViewCreated: (controller) {
+              inAppWebViewController = controller;
+            },
+            onProgressChanged: (controller, progress) {
+              setState(() {
+                _progress = progress / 100;
+              });
+            },
+          ),
+        ],
+      ),
       ),
     );
-
   }
 }
