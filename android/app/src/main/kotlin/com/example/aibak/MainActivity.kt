@@ -1,4 +1,4 @@
-package com.example.aibak
+package com.tecnavis.aibak
 
 import io.flutter.embedding.android.FlutterActivity
 

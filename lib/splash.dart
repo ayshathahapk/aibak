@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../main.dart';
-import 'features/bottom.dart';
+import 'New/NavigationBar/navigation_bar.dart';
+import 'main.dart';
 
+// Position? currentLoc;
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -20,7 +20,8 @@ class _SplashState extends State<Splash> {
       Timer(Duration(seconds: 2), () {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => Bottom()),
+          // MaterialPageRoute(builder: (context) => RsaHome()),
+          MaterialPageRoute(builder: (context) => NavigationBarScreen()),
         );
       });
     });
@@ -32,11 +33,10 @@ class _SplashState extends State<Splash> {
       backgroundColor: Colors.black,
       body: Center(
         child: Container(
-          height: height*0.3,
-          width: width *0.3,
+          height: height * 0.3,
+          width: width * 0.3,
           child: Image.asset(
-            'asset/images/aibak-1.png',
-            // fit: BoxFit.cover,
+            'assets/images/AIBAK-LOGO.png',
           ),
         ),
       ),
