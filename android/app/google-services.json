@@ -1,0 +1,238 @@
+{
+  "project_info": {
+    "project_number": "537120145942",
+    "project_id": "aurifysecond",
+    "storage_bucket": "aurifysecond.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:58e82afb23a328f580eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.aibak"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:345e1204860e600080eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.alfin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:99e3d693742d33f280eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.arista"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:8a11b67db699061b80eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.babagold"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:4ab9cf61cd1324a480eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.beautyworld"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:7931f6644a30423f80eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.dgx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:3368c27a3ac933d580eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.goldking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:d408df0042e3fd0580eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.leengold"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:6e66831266a664d180eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.luxury_bullion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:ee0c04f5741c36e080eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.mpf_golds"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:0a4f97bde92decc880eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.royalvista"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537120145942:android:6f5d970894ec447580eb37",
+        "android_client_info": {
+          "package_name": "com.tecnavis.whitecrystal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZliU2llSDBGTdpPzgROcxGOfBfWfwRQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

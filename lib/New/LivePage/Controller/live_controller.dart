@@ -1,43 +1,39 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../Models/commodities_model.dart';
-import '../../../Models/news_model.dart';
-import '../../../Models/spread_document_model.dart';
+import '../../../../Models/spot_rate_model.dart';
 import '../Repository/live_repository_new.dart';
 
-final liveControllerProvider = Provider(
-  (ref) => LiveController(liveRepository: ref.watch(liveRepositoryNewProvider)),
+final liveControllerP = NotifierProvider<LiveController, bool>(
+  () => LiveController(),
 );
-final spreadDataProvider = FutureProvider<SpreadDocumentModel>(
+final spotRateProvider = FutureProvider(
   (ref) {
-    return ref.watch(liveControllerProvider).getSpread();
-  },
-);
-final commoditiesStream = StreamProvider(
-  (ref) {
-    return ref.watch(liveControllerProvider).commodities();
-  },
-);
-final newsStream = StreamProvider(
-  (ref) {
-    return ref.watch(liveControllerProvider).getNews();
+    return ref.watch(liveControllerP.notifier).getSpotRate();
   },
 );
 
-class LiveController {
-  final LiveRepositoryNew _liveRepositoryNew;
-  LiveController({required LiveRepositoryNew liveRepository})
-      : _liveRepositoryNew = liveRepository;
-
-  Future<SpreadDocumentModel> getSpread() async {
-    return _liveRepositoryNew.getSpread();
+class LiveController extends Notifier<bool> {
+  LiveRepositoryNew _repositoryNew() {
+    return ref.read(liveRepoNewProvider);
   }
 
-  Stream<List<CommoditiesModel>> commodities() {
-    return _liveRepositoryNew.commodities();
+  @override
+  bool build() {
+    // TODO: implement build
+    return false;
   }
 
-  Stream<NewsModel> getNews() {
-    return _liveRepositoryNew.getNews();
+  Future<SpotRateModel?> getSpotRate() async {
+    SpotRateModel? spotRateModel;
+    final res = await _repositoryNew().getSpotRate();
+    res.fold(
+      (l) {
+        print("###ERROR###");
+        print(l.message);
+      },
+      (r) {
+        spotRateModel = r;
+      },
+    );
+    return spotRateModel;
   }
 }

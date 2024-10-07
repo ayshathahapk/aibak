@@ -1,10 +1,10 @@
 class LiveRateModel {
-  Gold gold;
-  Gold silver;
+  final Gold? gold;
+  final Gold? silver;
 
   LiveRateModel({
-    required this.gold,
-    required this.silver,
+    this.gold,
+    this.silver,
   });
 
   LiveRateModel copyWith({
@@ -17,13 +17,13 @@ class LiveRateModel {
       );
 
   factory LiveRateModel.fromJson(Map<dynamic, dynamic> json) => LiveRateModel(
-        gold: Gold.fromJson(json["Gold"]),
-        silver: Gold.fromJson(json["Silver"]),
+        gold: json["Gold"] != null ? Gold.fromJson(json["Gold"]) : null,
+        silver: json["Silver"] != null ? Gold.fromJson(json["Silver"]) : null,
       );
 
   Map<String, dynamic> toJson() => {
-        "Gold": gold.toJson(),
-        "Silver": silver.toJson(),
+        "Gold": gold?.toJson(),
+        "Silver": silver?.toJson(),
       };
 }
 

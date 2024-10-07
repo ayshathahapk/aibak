@@ -20,20 +20,20 @@ const AndroidNotificationChannel channel = AndroidNotificationChannel(
 );
 final localhostServer = InAppLocalhostServer(documentRoot: 'assets');
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-FlutterLocalNotificationsPlugin();
+    FlutterLocalNotificationsPlugin();
 
 Future<void> main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //   // options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      // options: DefaultFirebaseOptions.currentPlatform,
+      );
   //
   // FirebaseMessaging.instance.requestPermission();
-  // await NotificationService.init();
-  // await flutterLocalNotificationsPlugin
-  //     .resolvePlatformSpecificImplementation<
-  //     AndroidFlutterLocalNotificationsPlugin>()
-  //     ?.createNotificationChannel(channel);
+  await NotificationService.init();
+  await flutterLocalNotificationsPlugin
+      .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>()
+      ?.createNotificationChannel(channel);
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.transparent),
           useMaterial3: true,
         ),
-        home: Splash(),
+        home: const Splash(),
       );
     });
   }

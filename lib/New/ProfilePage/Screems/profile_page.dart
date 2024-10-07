@@ -1,10 +1,7 @@
-import 'package:aibak/Core/Utils/size_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../Core/CommenWidgets/custom_image_view.dart';
-import '../../../Core/CommenWidgets/space.dart';
-import '../../../Core/Utils/image_constant.dart';
 import '../../../Core/app_export.dart';
 import '../../BankDetails Screen/bank_details.dart';
 import '../../NewsScreen/Screen/news_screen.dart';
