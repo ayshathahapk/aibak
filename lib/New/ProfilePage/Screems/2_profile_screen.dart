@@ -87,16 +87,16 @@ class _ProfileScreen2State extends ConsumerState<ProfileScreen2> {
   }
 
   void _launchContact() async {
-    final Uri url =
-    Uri.parse('tel:${FirebaseConstants.phone}'); // Replace with your contact number
+    final Uri url = Uri.parse(
+        'tel:${FirebaseConstants.phone}'); // Replace with your contact number
     if (!await launchUrl(url)) {
       throw 'Could not launch $url';
     }
   }
 
   void _launchMap() async {
-    final Uri url = Uri.parse(
-        FirebaseConstants.location); // Replace with your map link
+    final Uri url =
+        Uri.parse(FirebaseConstants.location); // Replace with your map link
     if (!await launchUrl(url)) {
       throw 'Could not launch $url';
     }
@@ -141,7 +141,7 @@ class _ProfileScreen2State extends ConsumerState<ProfileScreen2> {
                     context,
                     FontAwesomeIcons.whatsapp,
                     'WhatsApp',
-                    '+971501341604',
+                    FirebaseConstants.whatsapp,
                     _launchWhatsApp,
                   ),
                   _buildCard(
@@ -155,7 +155,7 @@ class _ProfileScreen2State extends ConsumerState<ProfileScreen2> {
                     context,
                     FontAwesomeIcons.phone,
                     'Call Us',
-                    '+971 501341604',
+                    FirebaseConstants.phone,
                     _launchContact,
                   ),
                   _buildCard(
