@@ -8,6 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'Core/Utils/notification service.dart';
 import 'Core/Utils/size_utils.dart';
+import 'firebase_options.dart';
 // import 'firebase_options.dart';
 
 var height;
@@ -25,7 +26,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      // options: DefaultFirebaseOptions.currentPlatform,
+      options: DefaultFirebaseOptions.currentPlatform,
       );
   //
   // FirebaseMessaging.instance.requestPermission();

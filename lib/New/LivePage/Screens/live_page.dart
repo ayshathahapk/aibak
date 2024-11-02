@@ -102,7 +102,7 @@ class _LivePageState extends ConsumerState<LivePage> {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(left: 8.0.h, right: 8.h),
+          padding: EdgeInsets.only(left: 18.0.h, right: 18.h),
           child: Column(
             children: [
               Row(
@@ -143,6 +143,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                 ],
               ),
               space(),
+              space(),
               Container(
                 height: 55.h,
                 decoration: BoxDecoration(
@@ -172,7 +173,7 @@ class _LivePageState extends ConsumerState<LivePage> {
               ///First Table Live Rate of GOLD and SILVER.
               Consumer(
                 builder: (context, ref1, child) {
-                  final liveRateData = ref.watch(liveRateProvider);
+                  final liveRateData = ref1.watch(liveRateProvider);
                   return ref1.watch(spotRateProvider).when(
                     data: (spotRate) {
                       if (spotRate != null &&
@@ -341,7 +342,11 @@ class _LivePageState extends ConsumerState<LivePage> {
                                             size: 20.v,
                                           ),
                                           Text(
-                                            "${liveRateData.silver?.low ?? 0 + (spreadNow.silverLowMargin)}",
+                                            (liveRateData.silver?.low ??
+                                                    0 +
+                                                        (spreadNow
+                                                            .silverLowMargin))
+                                                .toStringAsFixed(2),
                                             style: CustomPoppinsTextStyles
                                                 .bodyTextSemiBold,
                                           )
@@ -368,7 +373,11 @@ class _LivePageState extends ConsumerState<LivePage> {
                                             size: 20.v,
                                           ),
                                           Text(
-                                            "${liveRateData.silver?.high ?? 0 + (spreadNow.silverHighMargin)}",
+                                            (liveRateData.silver?.high ??
+                                                    0 +
+                                                        (spreadNow
+                                                            .silverHighMargin))
+                                                .toStringAsFixed(2),
                                             style: CustomPoppinsTextStyles
                                                 .bodyTextSemiBold,
                                           )
@@ -571,7 +580,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                           if (data123 != null) {
                             return AutoScrollText(
                               delayBefore: const Duration(seconds: 1),
-                              "${data123.news.news[0].title}                             ",
+                              "${data123.news.news[0].title}   ${data123.news.news[0].title}   ",
                               style: CustomPoppinsTextStyles.bodyText,
                             );
                           } else {
@@ -610,7 +619,7 @@ class _LivePageState extends ConsumerState<LivePage> {
         if (ref.watch(bannerBool))
           Positioned(
             top: 15.v,
-            right: 50.h,
+            right: 90.h,
             child: Transform.rotate(
               angle: -Math.pi / 4,
               child: Consumer(
@@ -622,7 +631,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                     child: Center(
                       child: AutoScrollText(
                         delayBefore: const Duration(seconds: 1),
-                        "           Market is closed. It will open soon!            ",
+                        "Market is closed. It will open soon!  Market is closed. It will open soon! ",
                         style: CustomPoppinsTextStyles.buttonText,
                       ),
                     ),
