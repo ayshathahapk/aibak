@@ -200,7 +200,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                             ref1.read(goldAskPrice.notifier).update(
                               (state) {
                                 final res = (liveRateData.gold!.bid +
-                                    (spreadNow.goldAskSpread));
+                                    (spreadNow.goldBidSpread));
                                 return res;
                               },
                             );

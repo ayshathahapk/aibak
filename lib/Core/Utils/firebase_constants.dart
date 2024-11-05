@@ -9,7 +9,7 @@ class FirebaseConstants {
   static const user = "users";
   static const secretKey = "IfiuH/ko+rh/gekRvY4Va0s+aGYuGJEAOkbJbChhcqo=";
   static const baseUrl = "https://api.aurify.ae/user/";
-  static const adminId = "67038217c5569370c29e5aff";
+  static const adminId = "67038340c5569370c29e5c1a";
   static const headers = {
     'X-Secret-Key': secretKey,
     'Content-Type': 'application/json',
