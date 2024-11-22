@@ -81,7 +81,7 @@ class _LivePageState extends ConsumerState<LivePage> {
         return 116.6400;
       case "TOLA":
         return 11.664;
-      case "OZ":
+      case " OZ":
         return 31.1034768;
       default:
         return 1;
@@ -107,7 +107,7 @@ class _LivePageState extends ConsumerState<LivePage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top:13),
+                  padding: const EdgeInsets.only(top: 13),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -173,7 +173,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                   ),
                 ),
                 space(),
-            
+
                 ///First Table Live Rate of GOLD and SILVER.
                 Consumer(
                   builder: (context, ref1, child) {
@@ -239,7 +239,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           style: CustomPoppinsTextStyles
                                               .bodyTextGold),
                                       TextSpan(
-                                          text: "OZ",
+                                          text: " OZ",
                                           style: GoogleFonts.poppins(
                                               // fontFamily: marine,
                                               color: appTheme.gold,
@@ -247,7 +247,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                               fontSize: 15.fSize))
                                     ])),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         ValueDisplayWidget(
                                           value: (liveRateData.gold!.bid +
@@ -275,11 +276,13 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         ValueDisplayWidget2(
                                             value: (((liveRateData.gold!.bid +
-                                                        spreadNow.goldBidSpread) +
+                                                        spreadNow
+                                                            .goldBidSpread) +
                                                     spreadNow.goldAskSpread) +
                                                 0.5)),
                                         Row(
@@ -321,7 +324,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           style: CustomPoppinsTextStyles
                                               .bodyTextGold),
                                       TextSpan(
-                                          text: "OZ",
+                                          text: " OZ",
                                           style: GoogleFonts.poppins(
                                               // fontFamily: marine,
                                               color: appTheme.gold,
@@ -329,13 +332,15 @@ class _LivePageState extends ConsumerState<LivePage> {
                                               fontSize: 15.fSize))
                                     ])),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         ValueDisplayWidgetSilver1(
                                             // value: 0,
                                             value: (liveRateData.silver?.bid ??
                                                 0 +
-                                                    (spreadNow.silverBidSpread ??
+                                                    (spreadNow
+                                                            .silverBidSpread ??
                                                         0))),
                                         Row(
                                           children: [
@@ -359,7 +364,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         ValueDisplayWidgetSilver2(
                                             // value: 0,
@@ -417,7 +423,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           style: CustomPoppinsTextStyles
                                               .bodyTextGold),
                                       TextSpan(
-                                          text: "OZ",
+                                          text: " OZ",
                                           style: GoogleFonts.poppins(
                                               // fontFamily: marine,
                                               color: appTheme.gold,
@@ -425,7 +431,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                               fontSize: 15.fSize))
                                     ])),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         const ValueDisplayWidget(
                                           value: 0.0,
@@ -448,7 +455,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         const ValueDisplayWidget2(
                                           value: 0.0,
@@ -492,7 +500,7 @@ class _LivePageState extends ConsumerState<LivePage> {
                                           style: CustomPoppinsTextStyles
                                               .bodyTextGold),
                                       TextSpan(
-                                          text: "OZ",
+                                          text: " OZ",
                                           style: GoogleFonts.poppins(
                                               // fontFamily: marine,
                                               color: appTheme.gold,
@@ -500,7 +508,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                               fontSize: 15.fSize))
                                     ])),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         const ValueDisplayWidgetSilver1(
                                             // value: 0,
@@ -523,7 +532,8 @@ class _LivePageState extends ConsumerState<LivePage> {
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         const ValueDisplayWidgetSilver2(
                                             // value: 0,
@@ -575,13 +585,14 @@ class _LivePageState extends ConsumerState<LivePage> {
                     slverPrice: ref2.watch(silverAskPrice),
                   ),
                 ),
-            
+
                 space(),
                 Consumer(
                   builder: (context, ref1, child) {
                     return ref1.watch(newsProvider).when(
                           data: (data123) {
-                            if (data123 != null) {
+                            if (data123 != null &&
+                                data123.news.news.isNotEmpty) {
                               return AutoScrollText(
                                 delayBefore: const Duration(seconds: 1),
                                 "${data123.news.news[0].title}   ${data123.news.news[0].title}   ",
@@ -604,12 +615,6 @@ class _LivePageState extends ConsumerState<LivePage> {
                         );
                   },
                 ),
-            
-                // AutoScrollText(
-                //   delayBefore: Duration(seconds: 3),
-                //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-                //   style: CustomPoppinsTextStyles.bodyText,
-                // ),
               ],
             ),
           ),
@@ -623,6 +628,10 @@ class _LivePageState extends ConsumerState<LivePage> {
                 imagePath: ImageConstants.logo,
                 width: 85.h,
               ),
+              Text(
+                "AIBAK GOLD",
+                style: CustomPoppinsTextStyles.name,
+              )
             ],
           ),
         ),

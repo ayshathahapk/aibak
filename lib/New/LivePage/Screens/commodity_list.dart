@@ -144,8 +144,8 @@ class CommodityList extends ConsumerWidget {
                                                   style: CustomPoppinsTextStyles
                                                       .bodyText1),
                                               TextSpan(
-                                                  text: commodities.purity
-                                                      .toString(),
+                                                  text:
+                                                      " ${commodities.purity}",
                                                   style: GoogleFonts.poppins(
                                                       // fontFamily: marine,
                                                       color: appTheme.black900,
@@ -375,7 +375,7 @@ class CommodityList extends ConsumerWidget {
                                             child: RichText(
                                                 text: TextSpan(children: [
                                               TextSpan(
-                                                  text: "GOLD",
+                                                  text: "GOLD ",
                                                   style: CustomPoppinsTextStyles
                                                       .bodyText1),
                                               TextSpan(

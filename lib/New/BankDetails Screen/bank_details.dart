@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import '../../Core/CommenWidgets/CustomElevatedButton/custom_elevated_button.dart';
+import '../../Core/CommenWidgets/custom_image_view.dart';
 import '../../Core/CommenWidgets/custom_text_field.dart';
 import '../../Core/CommenWidgets/space.dart';
 import '../../Core/Theme/new_custom_text_style.dart';
@@ -80,7 +81,7 @@ class _DetailsState extends ConsumerState<Details> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding: EdgeInsets.all(8.v),
+          padding: EdgeInsets.only(top: 8.v, left: 18.v, right: 18.v),
           height: SizeUtils.height,
           width: SizeUtils.width,
           decoration: const BoxDecoration(
@@ -93,10 +94,23 @@ class _DetailsState extends ConsumerState<Details> {
             controller: _controller,
             child: Column(
               children: [
-                Image.asset(
-                  ImageConstants.logo,
-                  width: SizeUtils.width * 0.30,
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Column(
+                    children: [
+                      space(w: 40),
+                      CustomImageView(
+                        imagePath: ImageConstants.logo,
+                        width: 100.h,
+                      ),
+                      Text(
+                        "AIBAK GOLD",
+                        style: CustomPoppinsTextStyles.name,
+                      )
+                    ],
+                  ),
                 ),
+                space(),
                 Text(
                   DateFormat('MMM/dd/yyyy-h:mm:ss a').format(DateTime.now()),
                   style: const TextStyle(

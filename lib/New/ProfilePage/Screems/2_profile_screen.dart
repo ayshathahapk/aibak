@@ -104,71 +104,94 @@ class _ProfileScreen2State extends ConsumerState<ProfileScreen2> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(10.h),
-        width: SizeUtils.width,
-        height: SizeUtils.height,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(ImageConstants.logoBg), fit: BoxFit.cover)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CustomImageView(
-              imagePath: ImageConstants.logo,
-              width: 90.h,
-            ),
-            space(),
-            Text(
-              'Customer Support',
-              style: CustomPoppinsTextStyles.bodyText3White,
-            ),
-            Text(
-              '24 / 7 Support',
-              style: CustomPoppinsTextStyles.bodyText1White,
-            ),
-            SizedBox(height: 20),
-            Expanded(
-              flex: 0,
-              child: GridView.count(
-                shrinkWrap: true,
-                crossAxisCount: 2,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                children: [
-                  _buildCard(
-                    context,
-                    FontAwesomeIcons.whatsapp,
-                    'WhatsApp',
-                    FirebaseConstants.whatsapp,
-                    _launchWhatsApp,
-                  ),
-                  _buildCard(
-                    context,
-                    FontAwesomeIcons.envelope,
-                    'Mail',
-                    'Drop us a line',
-                    _launchMail,
-                  ),
-                  _buildCard(
-                    context,
-                    FontAwesomeIcons.phone,
-                    'Call Us',
-                    FirebaseConstants.phone,
-                    _launchContact,
-                  ),
-                  _buildCard(
-                    context,
-                    FontAwesomeIcons.mapLocationDot,
-                    'Our Adress',
-                    'React us at',
-                    _launchMap,
-                  ),
-                ],
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          padding: EdgeInsets.all(10.h),
+          width: SizeUtils.width,
+          height: SizeUtils.height,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(ImageConstants.logoBg), fit: BoxFit.cover)),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(FontAwesomeIcons.arrowLeft,
+                        color: appTheme.whiteA700)),
               ),
-            ),
-          ],
+              Align(
+                alignment: Alignment.topCenter,
+                child: Column(
+                  children: [
+                    space(w: 40),
+                    CustomImageView(
+                      imagePath: ImageConstants.logo,
+                      width: 100.h,
+                    ),
+                    Text(
+                      "AIBAK GOLD",
+                      style: CustomPoppinsTextStyles.name,
+                    )
+                  ],
+                ),
+              ),
+              space(),
+              Text(
+                'Customer Support',
+                style: CustomPoppinsTextStyles.bodyText3White,
+              ),
+              Text(
+                '24 / 7 Support',
+                style: CustomPoppinsTextStyles.bodyText1White,
+              ),
+              SizedBox(height: 20),
+              Expanded(
+                flex: 0,
+                child: GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  children: [
+                    _buildCard(
+                      context,
+                      FontAwesomeIcons.whatsapp,
+                      'WhatsApp',
+                      FirebaseConstants.whatsapp,
+                      _launchWhatsApp,
+                    ),
+                    _buildCard(
+                      context,
+                      FontAwesomeIcons.envelope,
+                      'Mail',
+                      'Drop us a line',
+                      _launchMail,
+                    ),
+                    _buildCard(
+                      context,
+                      FontAwesomeIcons.phone,
+                      'Call Us',
+                      FirebaseConstants.phone,
+                      _launchContact,
+                    ),
+                    _buildCard(
+                      context,
+                      FontAwesomeIcons.mapLocationDot,
+                      'Our Adress',
+                      'React us at',
+                      _launchMap,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

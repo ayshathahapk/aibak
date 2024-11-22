@@ -46,6 +46,10 @@ class CustomPoppinsTextStyles {
       color: appTheme.black900,
       fontWeight: FontWeight.w500,
       fontSize: 20.fSize);
+  static final TextStyle name = GoogleFonts.montserrat(
+      color: appTheme.whiteA700,
+      fontSize: 20.fSize,
+      fontWeight: FontWeight.w600);
 
   static final TextStyle commodityText = GoogleFonts.poppins(
       // fontFamily: marine,

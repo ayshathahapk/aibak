@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import '../../../Core/CommenWidgets/custom_image_view.dart';
 import '../../../Core/CommenWidgets/space.dart';
 import '../../../Core/Theme/new_custom_text_style.dart';
 import '../../../Core/Theme/theme_helper.dart';
@@ -32,12 +34,33 @@ class _NewsScreenState extends ConsumerState<NewsScreen> {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 30),
+            padding: EdgeInsets.only(top: 10.h, right: 18.h, left: 18.h),
             child: Column(
               children: [
-                Image.asset(
-                  ImageConstants.logo,
-                  width: SizeUtils.width * 0.30,
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(FontAwesomeIcons.arrowLeft,
+                          color: appTheme.whiteA700)),
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Column(
+                    children: [
+                      space(w: 40),
+                      CustomImageView(
+                        imagePath: ImageConstants.logo,
+                        width: 100.h,
+                      ),
+                      Text(
+                        "AIBAK GOLD",
+                        style: CustomPoppinsTextStyles.name,
+                      )
+                    ],
+                  ),
                 ),
                 Text(
                   DateFormat('MMM/dd/yyyy-h:mm a').format(DateTime.now()),
